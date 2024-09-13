@@ -84,7 +84,7 @@
             // label_hora
             // 
             this.label_hora.BackColor = System.Drawing.Color.Transparent;
-            this.label_hora.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label_hora.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.label_hora.ForeColor = System.Drawing.Color.Cyan;
             this.label_hora.Location = new System.Drawing.Point(12, 9);
             this.label_hora.Name = "label_hora";

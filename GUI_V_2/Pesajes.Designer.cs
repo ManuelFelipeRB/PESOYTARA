@@ -26,7 +26,7 @@
         /// Método necesario para admitir el Diseñador. No se puede modificar
         /// el contenido de este método con el editor de código.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             this.label11 = new System.Windows.Forms.Label();
@@ -42,6 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.display_peso = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -49,7 +50,6 @@
             this.but_conectar = new System.Windows.Forms.Button();
             this.comboBox_bascula = new System.Windows.Forms.ComboBox();
             this.comboBox_puertos = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label_fecha = new System.Windows.Forms.Label();
             this.but_capturar = new System.Windows.Forms.Button();
             this.text_peso = new System.Windows.Forms.TextBox();
@@ -270,8 +270,19 @@
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Location = new System.Drawing.Point(29, 16);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(490, 139);
+            this.panel2.Size = new System.Drawing.Size(490, 134);
             this.panel2.TabIndex = 77;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(265, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.TabIndex = 88;
+            this.label1.Text = "CONEXION";
             // 
             // label22
             // 
@@ -375,17 +386,6 @@
             this.comboBox_puertos.TabIndex = 85;
             this.comboBox_puertos.Text = "Seleccione";
             this.comboBox_puertos.SelectedIndexChanged += new System.EventHandler(this.comboBox_puertos_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(265, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 88;
-            this.label1.Text = "CONEXION";
             // 
             // label_fecha
             // 
@@ -662,7 +662,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(455, 124);
             this.panel3.TabIndex = 80;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            
             // 
             // label_date
             // 
@@ -745,7 +745,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1050, 605);
             this.panel1.TabIndex = 77;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+           
             // 
             // panel6
             // 

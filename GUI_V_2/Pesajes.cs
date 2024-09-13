@@ -17,11 +17,12 @@ namespace PESOYTARA
     public partial class Pesajes : UserControl
     {
         private string datos;
-        private string puertoSeleccionado;
+        public string puertoSeleccionado;
         //private SqlConnection conexionSql;
         //private Loggin loggin;
         //private Reportes reportes;
         //private Configuracion configuracion;
+        //public SerialPort SerialPort1 { get; private set; }
 
         public Pesajes()
         {
@@ -35,15 +36,16 @@ namespace PESOYTARA
             //    ParentForm = this
             //};
             //this.Controls.Add(userControl);
+            //SerialPort1 = new SerialPort();
         }
 
-        private void LoadComboBoxPuertos()
+        public void LoadComboBoxPuertos()
         {
             string[] puertos = SerialPort.GetPortNames();
             comboBox_puertos.Items.AddRange(puertos);
         }
 
-        private void ConfigureSerialPort()
+        public void ConfigureSerialPort()
         {
             SerialPort1.PortName = comboBox_puertos.Text;
             SerialPort1.BaudRate = 9600;
@@ -86,7 +88,7 @@ namespace PESOYTARA
             }
         }
 
-        private void SerialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        public void SerialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             try
             {
@@ -131,7 +133,7 @@ namespace PESOYTARA
             return data.Trim(); // Ejemplo de formateo
         }
 
-        private void SerialPort1_ErrorReceived(object sender, SerialErrorReceivedEventArgs e)
+        public void SerialPort1_ErrorReceived(object sender, SerialErrorReceivedEventArgs e)
         {
             MessageBox.Show("Se ha producido un error en el puerto serial.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
@@ -306,24 +308,6 @@ namespace PESOYTARA
             ActualizarTiquete();
         }
 
-        private void but_conectar_Click_1(object sender, EventArgs e)
-        {
-            // Aquí iría el código para conectar el puerto serie.
-            try
-            {
-                if (!SerialPort1.IsOpen)
-                {
-                    SerialPort1.Open();
-                    MessageBox.Show("Conectado", "Puerto COM", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    UpdateControlState(true);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al conectar: {ex.Message}", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void comboBox_puertos_SelectedIndexChanged(object sender, EventArgs e)
         {
             puertoSeleccionado = comboBox_puertos.Text;
@@ -340,7 +324,7 @@ namespace PESOYTARA
             label_fecha.Text = DateTime.Now.ToShortDateString();
         }
 
-        private void but_conectar_Click(object sender, EventArgs e)
+        public void but_conectar_Click(object sender, EventArgs e)
         {
             {
                 if (comboBox_puertos.SelectedItem == null || comboBox_bascula.SelectedItem == null)
@@ -365,16 +349,6 @@ namespace PESOYTARA
                     UpdateControlState(true); // El estado debe ser conectado
                 }
             }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
     }

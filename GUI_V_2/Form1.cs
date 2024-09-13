@@ -25,6 +25,9 @@ namespace PESOYTARA
         {
             InitializeComponent();
             GuardarControlesOriginales();
+            timer1.Start();
+            //Pesajes Pesajes = new pesajes();
+           // this.Controls.Add(pesajes);
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -51,32 +54,28 @@ namespace PESOYTARA
             //label_fecha.Text = DateTime.Now.ToLongDateString();
         }
 
-        private void iconcerrar_Click(object sender, EventArgs e)
+        public void iconcerrar_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if ()
-            //    {
-            //        SerialPort1.Close();
-            //        MessageBox.Show("Desconectado", "Puerto COM", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                   
-            //        text_peso.ReadOnly = true;
-            //        display_peso.Text = "";
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show($"Error al desconectar: {ex.Message}", "Error de Desconexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //finally
-            //{
-            //    Close();
-            //    //Application.Exit();
-            //}
+            try
+            {
+                //if (Pesajes.SerialPort1.IsOpen)
+                //{
+                //    Pesajes.SerialPort1.Close();
+                //    MessageBox.Show("Desconectado", "Puerto COM", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-
-            Application.Exit();
-
+                //    Pesajes.text_peso.ReadOnly = true;
+                //    display_peso.Text = "";
+                //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al desconectar: {ex.Message}", "Error de Desconexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+              
+                Application.Exit();
+            }
         }
 
         private void iconmaximizar_Click(object sender, EventArgs e)
