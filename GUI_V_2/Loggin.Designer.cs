@@ -81,7 +81,7 @@
             // 
             // Backpanel
             // 
-            this.Backpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(87)))), ((int)(((byte)(95)))));
+            this.Backpanel.BackColor = System.Drawing.Color.White;
             this.Backpanel.Controls.Add(this.panel1);
             this.Backpanel.Controls.Add(this.label8);
             this.Backpanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -93,7 +93,7 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(40)))), ((int)(((byte)(63)))));
+            this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Controls.Add(this.text_contraseña);
             this.panel1.Controls.Add(this.but_conectar);
             this.panel1.Controls.Add(this.label3);
@@ -106,7 +106,7 @@
             // 
             // but_conectar
             // 
-            this.but_conectar.BackColor = System.Drawing.Color.DarkOrange;
+            this.but_conectar.BackColor = System.Drawing.Color.SeaShell;
             this.but_conectar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_conectar.ForeColor = System.Drawing.Color.Black;
             this.but_conectar.Location = new System.Drawing.Point(161, 219);
@@ -122,7 +122,7 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("DigitalDB", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label8.ForeColor = System.Drawing.Color.Cyan;
             this.label8.Location = new System.Drawing.Point(450, 118);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(193, 26);

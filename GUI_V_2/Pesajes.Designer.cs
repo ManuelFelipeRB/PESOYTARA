@@ -275,7 +275,7 @@
             // 
             // label22
             // 
-            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(40)))), ((int)(((byte)(63)))));
+            this.label22.BackColor = System.Drawing.Color.Gray;
             this.label22.Font = new System.Drawing.Font("DigitsDB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Cyan;
             this.label22.Location = new System.Drawing.Point(211, 53);
@@ -287,7 +287,7 @@
             // 
             // display_peso
             // 
-            this.display_peso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(40)))), ((int)(((byte)(63)))));
+            this.display_peso.BackColor = System.Drawing.Color.Gray;
             this.display_peso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.display_peso.Font = new System.Drawing.Font("Digital SF", 45.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.display_peso.ForeColor = System.Drawing.Color.Cyan;
@@ -301,7 +301,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(40)))), ((int)(((byte)(63)))));
+            this.panel5.BackColor = System.Drawing.Color.Gray;
             this.panel5.Controls.Add(this.but_desconectar);
             this.panel5.Controls.Add(this.but_conectar);
             this.panel5.Controls.Add(this.comboBox_bascula);
@@ -313,7 +313,7 @@
             // 
             // but_desconectar
             // 
-            this.but_desconectar.BackColor = System.Drawing.Color.DarkOrange;
+            this.but_desconectar.BackColor = System.Drawing.Color.Gainsboro;
             this.but_desconectar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_desconectar.ForeColor = System.Drawing.Color.Black;
             this.but_desconectar.Location = new System.Drawing.Point(115, 53);
@@ -326,7 +326,7 @@
             // 
             // but_conectar
             // 
-            this.but_conectar.BackColor = System.Drawing.Color.DarkOrange;
+            this.but_conectar.BackColor = System.Drawing.Color.Gainsboro;
             this.but_conectar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_conectar.ForeColor = System.Drawing.Color.Black;
             this.but_conectar.Location = new System.Drawing.Point(115, 17);
@@ -389,7 +389,7 @@
             // 
             // label_fecha
             // 
-            this.label_fecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(40)))), ((int)(((byte)(63)))));
+            this.label_fecha.BackColor = System.Drawing.Color.Gray;
             this.label_fecha.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.label_fecha.ForeColor = System.Drawing.Color.Cyan;
             this.label_fecha.Location = new System.Drawing.Point(300, 11);
@@ -400,7 +400,7 @@
             // 
             // but_capturar
             // 
-            this.but_capturar.BackColor = System.Drawing.Color.DarkOrange;
+            this.but_capturar.BackColor = System.Drawing.Color.Gainsboro;
             this.but_capturar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_capturar.ForeColor = System.Drawing.Color.Black;
             this.but_capturar.Location = new System.Drawing.Point(396, 25);
@@ -628,7 +628,7 @@
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(40)))), ((int)(((byte)(63)))));
+            this.label6.BackColor = System.Drawing.Color.Gray;
             this.label6.Font = new System.Drawing.Font("Dubai", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Cyan;
             this.label6.Location = new System.Drawing.Point(20, 11);
@@ -640,7 +640,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(40)))), ((int)(((byte)(63)))));
+            this.panel3.BackColor = System.Drawing.Color.Gray;
             this.panel3.Controls.Add(this.label_date);
             this.panel3.Controls.Add(this.label_neto);
             this.panel3.Controls.Add(this.label9);
@@ -702,7 +702,7 @@
             // but_guardar
             // 
             this.but_guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.but_guardar.BackColor = System.Drawing.Color.DarkOrange;
+            this.but_guardar.BackColor = System.Drawing.Color.Gainsboro;
             this.but_guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.but_guardar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -733,7 +733,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.but_imprimir);
@@ -750,7 +750,7 @@
             // panel6
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(40)))), ((int)(((byte)(63)))));
+            this.panel6.BackColor = System.Drawing.Color.Gray;
             this.panel6.Controls.Add(this.but_capturar);
             this.panel6.Controls.Add(this.text_observaciones);
             this.panel6.Controls.Add(this.text_peso);
@@ -874,7 +874,7 @@
             // but_imprimir
             // 
             this.but_imprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.but_imprimir.BackColor = System.Drawing.Color.DarkOrange;
+            this.but_imprimir.BackColor = System.Drawing.Color.Gainsboro;
             this.but_imprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.but_imprimir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_imprimir.ForeColor = System.Drawing.Color.Black;

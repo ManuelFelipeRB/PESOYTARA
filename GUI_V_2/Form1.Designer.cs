@@ -64,7 +64,7 @@
             // 
             // MenuVertical
             // 
-            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(40)))), ((int)(((byte)(63)))));
+            this.MenuVertical.BackColor = System.Drawing.Color.Gray;
             this.MenuVertical.Controls.Add(this.label_hora);
             this.MenuVertical.Controls.Add(this.but_configuracion);
             this.MenuVertical.Controls.Add(this.lblcorreo);
@@ -83,7 +83,7 @@
             // 
             // label_hora
             // 
-            this.label_hora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(40)))), ((int)(((byte)(63)))));
+            this.label_hora.BackColor = System.Drawing.Color.Transparent;
             this.label_hora.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label_hora.ForeColor = System.Drawing.Color.Cyan;
             this.label_hora.Location = new System.Drawing.Point(12, 9);
@@ -96,10 +96,10 @@
             // 
             this.but_configuracion.BackColor = System.Drawing.Color.Transparent;
             this.but_configuracion.FlatAppearance.BorderSize = 0;
-            this.but_configuracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.but_configuracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkCyan;
             this.but_configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.but_configuracion.Font = new System.Drawing.Font("Digital", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_configuracion.ForeColor = System.Drawing.Color.DarkOrange;
+            this.but_configuracion.ForeColor = System.Drawing.Color.White;
             this.but_configuracion.Image = ((System.Drawing.Image)(resources.GetObject("but_configuracion.Image")));
             this.but_configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.but_configuracion.Location = new System.Drawing.Point(3, 345);
@@ -114,7 +114,7 @@
             // 
             this.lblcorreo.AutoSize = true;
             this.lblcorreo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcorreo.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblcorreo.ForeColor = System.Drawing.Color.White;
             this.lblcorreo.Location = new System.Drawing.Point(79, 105);
             this.lblcorreo.Name = "lblcorreo";
             this.lblcorreo.Size = new System.Drawing.Size(53, 17);
@@ -125,7 +125,7 @@
             // 
             this.lbluser.AutoSize = true;
             this.lbluser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbluser.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lbluser.ForeColor = System.Drawing.Color.White;
             this.lbluser.Location = new System.Drawing.Point(79, 87);
             this.lbluser.Name = "lbluser";
             this.lbluser.Size = new System.Drawing.Size(54, 17);
@@ -146,7 +146,7 @@
             // 
             this.lblusuario.AutoSize = true;
             this.lblusuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblusuario.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblusuario.ForeColor = System.Drawing.Color.White;
             this.lblusuario.Location = new System.Drawing.Point(79, 70);
             this.lblusuario.Name = "lblusuario";
             this.lblusuario.Size = new System.Drawing.Size(50, 17);
@@ -156,10 +156,10 @@
             // but_pesajes
             // 
             this.but_pesajes.FlatAppearance.BorderSize = 0;
-            this.but_pesajes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.but_pesajes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkCyan;
             this.but_pesajes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.but_pesajes.Font = new System.Drawing.Font("Digital", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_pesajes.ForeColor = System.Drawing.Color.DarkOrange;
+            this.but_pesajes.ForeColor = System.Drawing.Color.White;
             this.but_pesajes.Image = ((System.Drawing.Image)(resources.GetObject("but_pesajes.Image")));
             this.but_pesajes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.but_pesajes.Location = new System.Drawing.Point(3, 253);
@@ -173,10 +173,10 @@
             // but_loggin
             // 
             this.but_loggin.FlatAppearance.BorderSize = 0;
-            this.but_loggin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.but_loggin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkCyan;
             this.but_loggin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.but_loggin.Font = new System.Drawing.Font("Digital", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_loggin.ForeColor = System.Drawing.Color.DarkOrange;
+            this.but_loggin.ForeColor = System.Drawing.Color.White;
             this.but_loggin.Image = ((System.Drawing.Image)(resources.GetObject("but_loggin.Image")));
             this.but_loggin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.but_loggin.Location = new System.Drawing.Point(3, 207);
@@ -190,10 +190,10 @@
             // but_reportes
             // 
             this.but_reportes.FlatAppearance.BorderSize = 0;
-            this.but_reportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.but_reportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkCyan;
             this.but_reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.but_reportes.Font = new System.Drawing.Font("Digital", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_reportes.ForeColor = System.Drawing.Color.DarkOrange;
+            this.but_reportes.ForeColor = System.Drawing.Color.White;
             this.but_reportes.Image = ((System.Drawing.Image)(resources.GetObject("but_reportes.Image")));
             this.but_reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.but_reportes.Location = new System.Drawing.Point(3, 299);
@@ -207,7 +207,7 @@
             // btnlogoInicio
             // 
             this.btnlogoInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnlogoInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(87)))), ((int)(((byte)(95)))));
+            this.btnlogoInicio.BackColor = System.Drawing.Color.Gray;
             this.btnlogoInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnlogoInicio.ErrorImage = null;
             this.btnlogoInicio.Image = global::GUI_V_2.Properties.Resources.Mobile_Menu_Icon;
@@ -221,7 +221,7 @@
             // 
             // BarraTitulo
             // 
-            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(40)))), ((int)(((byte)(63)))));
+            this.BarraTitulo.BackColor = System.Drawing.Color.Gray;
             this.BarraTitulo.Controls.Add(this.label1);
             this.BarraTitulo.Controls.Add(this.label8);
             this.BarraTitulo.Controls.Add(this.iconminimizar);
@@ -241,7 +241,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(901, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 17);
@@ -253,7 +253,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("DigitalDB", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(598, 9);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(297, 26);
@@ -263,6 +263,7 @@
             // iconminimizar
             // 
             this.iconminimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconminimizar.BackColor = System.Drawing.Color.DarkGray;
             this.iconminimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconminimizar.Image = ((System.Drawing.Image)(resources.GetObject("iconminimizar.Image")));
             this.iconminimizar.Location = new System.Drawing.Point(969, 5);
@@ -276,6 +277,7 @@
             // iconrestaurar
             // 
             this.iconrestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconrestaurar.BackColor = System.Drawing.Color.DarkGray;
             this.iconrestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconrestaurar.Image = ((System.Drawing.Image)(resources.GetObject("iconrestaurar.Image")));
             this.iconrestaurar.Location = new System.Drawing.Point(995, 5);
@@ -303,6 +305,7 @@
             // iconcerrar
             // 
             this.iconcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconcerrar.BackColor = System.Drawing.Color.DarkGray;
             this.iconcerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconcerrar.Image = ((System.Drawing.Image)(resources.GetObject("iconcerrar.Image")));
             this.iconcerrar.Location = new System.Drawing.Point(1021, 5);
@@ -329,7 +332,7 @@
             // 
             // Backpanel
             // 
-            this.Backpanel.BackColor = System.Drawing.Color.CadetBlue;
+            this.Backpanel.BackColor = System.Drawing.Color.DimGray;
             this.Backpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Backpanel.Location = new System.Drawing.Point(250, 45);
             this.Backpanel.Name = "Backpanel";
