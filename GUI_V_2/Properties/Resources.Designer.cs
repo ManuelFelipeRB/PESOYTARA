@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PESOYTARA.Properties {
+namespace GUI_V_2.Properties {
     using System;
     
     
@@ -86,6 +86,16 @@ namespace PESOYTARA.Properties {
         internal static System.Drawing.Bitmap IMO2 {
             get {
                 object obj = ResourceManager.GetObject("IMO2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mobile_Menu_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Mobile-Menu-Icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

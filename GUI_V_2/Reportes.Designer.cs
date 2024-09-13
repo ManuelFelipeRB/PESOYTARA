@@ -29,44 +29,60 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.but_capturar = new System.Windows.Forms.Button();
+            this.text_usuario = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(18, 245);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1013, 343);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("DigitalDB", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label1.Location = new System.Drawing.Point(620, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(388, 35);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "CONTROL DE PESO Y TARA";
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(18, 18);
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(322, 22);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(571, 199);
+            this.panel1.Size = new System.Drawing.Size(709, 199);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // but_capturar
+            // 
+            this.but_capturar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.but_capturar.BackColor = System.Drawing.Color.DarkOrange;
+            this.but_capturar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_capturar.ForeColor = System.Drawing.Color.Black;
+            this.but_capturar.Location = new System.Drawing.Point(220, 22);
+            this.but_capturar.Name = "but_capturar";
+            this.but_capturar.Size = new System.Drawing.Size(81, 35);
+            this.but_capturar.TabIndex = 68;
+            this.but_capturar.Text = "Buscar";
+            this.but_capturar.UseVisualStyleBackColor = false;
+            // 
+            // text_usuario
+            // 
+            this.text_usuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.text_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_usuario.Location = new System.Drawing.Point(19, 26);
+            this.text_usuario.Name = "text_usuario";
+            this.text_usuario.Size = new System.Drawing.Size(195, 24);
+            this.text_usuario.TabIndex = 69;
             // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(87)))), ((int)(((byte)(95)))));
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.Controls.Add(this.text_usuario);
+            this.Controls.Add(this.but_capturar);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Name = "Reportes";
@@ -78,7 +94,8 @@
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button but_capturar;
+        private System.Windows.Forms.TextBox text_usuario;
     }
 }

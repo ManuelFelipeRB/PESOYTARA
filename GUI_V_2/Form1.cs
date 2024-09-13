@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.IO.Ports;
 
 
 namespace PESOYTARA
@@ -34,20 +35,48 @@ namespace PESOYTARA
                 MenuVertical.Width = 70;
 
                 // Cambiar la imagen del botón al estado contraído
-                btnMenu.Image = Properties.Resources.Chevron_Right; // Reemplaza con tu recurso
+                //btnMenu.Image = Properties.Resources.Chevron_Right; // Reemplaza con tu recurso RIGHT
             }
             else
             {
                 MenuVertical.Width = 250;
 
                 // Cambiar la imagen del botón al estado expandido
-                btnMenu.Image = Properties.Resources.Chevron_Left; // Reemplaza con tu recurso
+                //btnMenu.Image = Properties.Resources.Chevron_Left; // Reemplaza con tu recurso LEFT
             }
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label_hora.Text = DateTime.Now.ToString("hh:mm tt");
+            //label_fecha.Text = DateTime.Now.ToLongDateString();
         }
 
         private void iconcerrar_Click(object sender, EventArgs e)
         {
+            //try
+            //{
+            //    if ()
+            //    {
+            //        SerialPort1.Close();
+            //        MessageBox.Show("Desconectado", "Puerto COM", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                   
+            //        text_peso.ReadOnly = true;
+            //        display_peso.Text = "";
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show($"Error al desconectar: {ex.Message}", "Error de Desconexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //finally
+            //{
+            //    Close();
+            //    //Application.Exit();
+            //}
+
+
             Application.Exit();
+
         }
 
         private void iconmaximizar_Click(object sender, EventArgs e)
@@ -101,7 +130,7 @@ namespace PESOYTARA
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            btnlogoInicio_Click(null, e);
+            paneldefondo("Loggin");
         }
 
         internal void paneldefondo(string panelName)
@@ -143,7 +172,7 @@ namespace PESOYTARA
                         this.Backpanel.Controls.Add(Configuracion);
                     }
                     break;
-                case "usuarios":
+                case "Loggin":
 
                     if (this.Loggin == null)
                     {
@@ -151,7 +180,7 @@ namespace PESOYTARA
                         this.Backpanel.Controls.Add(Loggin);
                         this.Loggin.Dock = System.Windows.Forms.DockStyle.Fill;
                         this.Loggin.Location = new System.Drawing.Point(0, 0);
-                        this.Loggin.Name = "usuario";
+                        this.Loggin.Name = "Loggin";
                         this.Size = new System.Drawing.Size(1300, 650);
                         this.Loggin.TabIndex = 0;
                     }
@@ -192,7 +221,7 @@ namespace PESOYTARA
 
         private void but_loggin_Click(object sender, EventArgs e)
         {
-            paneldefondo("usuarios");
+            paneldefondo("Loggin");
         }
 
         private void but_pesajes_Click(object sender, EventArgs e)
@@ -209,6 +238,7 @@ namespace PESOYTARA
         {
             paneldefondo("reportes");
         }
+
 
 
     }
