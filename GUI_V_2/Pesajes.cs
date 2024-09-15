@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.CompilerServices;
 using System.Runtime.Remoting.Messaging;
+using System.Diagnostics;
 
 namespace PESOYTARA
 {
@@ -43,8 +44,9 @@ namespace PESOYTARA
 
         private void Pesajes_Load(object sender, EventArgs e)
         {
-            
-           
+            basededatos evento = new basededatos();
+            evento.EventosdePesaje(dgv_eventos);
+
         }
         public void LoadComboBoxPuertos()
         {
@@ -76,6 +78,32 @@ namespace PESOYTARA
         }
 
 
+        public void but_conectar_Click(object sender, EventArgs e)
+        {
+            {
+                if (comboBox_puertos.SelectedItem == null || comboBox_bascula.SelectedItem == null)
+                {
+                    MessageBox.Show("Error: Seleccione Puerto y Báscula", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                try
+                {
+                    ConfigureSerialPort();
+                    SerialPort1.Open();
+                    SerialPort1.DataReceived += SerialPort1_DataReceived; // Asegúrate de suscribirte al evento
+                    MessageBox.Show("Conexión Exitosa", "Puerto COM", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al conectar: {ex.Message}", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    UpdateControlState(true); // El estado debe ser conectado
+                }
+            }
+        }
         public void but_desconectar_Click(object sender, EventArgs e)
         {
             try
@@ -131,6 +159,9 @@ namespace PESOYTARA
                 MessageBox.Show($"Error al leer del puerto serie: {ex.Message}");
             }
         }
+
+        
+
 
         private bool IsValidData(string data)
         {
@@ -218,6 +249,7 @@ namespace PESOYTARA
         {
             text_peso.Text = display_peso.Text;
             text_peso.Show();
+            but_guardar.Enabled = true;
             ActualizarTiquete();
         }
 
@@ -235,7 +267,7 @@ namespace PESOYTARA
                     {
                         // Calcula el peso neto
                         int pesoNeto = Math.Abs(peso - tara);
-
+                        but_guardar.Enabled = true;
                         // Actualiza los controles de la interfaz de usuario
                         label_date.Text = label_fecha.Text;
                         label_pesoini.Text = text_peso.Text;
@@ -327,6 +359,9 @@ namespace PESOYTARA
         private void comboBox_proceso_KeyPress(object sender, KeyPressEventArgs e) => MoveFocusOnEnter(sender, e);
         private void comboBox_ejes_KeyPress(object sender, KeyPressEventArgs e) => MoveFocusOnEnter(sender, e);
         private void text_item_KeyPress(object sender, KeyPressEventArgs e) => MoveFocusOnEnter(sender, e);
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e) => MoveFocusOnEnter(sender, e);
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e) => MoveFocusOnEnter(sender, e);
+        private void text_observaciones_KeyPress(object sender, KeyPressEventArgs e) => MoveFocusOnEnter(sender, e);
 
         private void comboBox_proceso_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -349,32 +384,31 @@ namespace PESOYTARA
             label_fecha.Text = DateTime.Now.ToShortDateString();
         }
 
-        public void but_conectar_Click(object sender, EventArgs e)
-        {
-            {
-                if (comboBox_puertos.SelectedItem == null || comboBox_bascula.SelectedItem == null)
-                {
-                    MessageBox.Show("Error: Seleccione Puerto y Báscula", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
 
-                try
-                {
-                    ConfigureSerialPort();
-                    SerialPort1.Open();
-                    SerialPort1.DataReceived += SerialPort1_DataReceived; // Asegúrate de suscribirte al evento
-                    MessageBox.Show("Conexión Exitosa", "Puerto COM", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error al conectar: {ex.Message}", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    UpdateControlState(true); // El estado debe ser conectado
-                }
+        private void dgv_eventos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indice = e.RowIndex;
+            if (indice == -1 || dgv_eventos.SelectedCells[1].Value.ToString() == "")
+            {
+                MessageBox.Show("Seleccione un registro Válido");
+                ResetLabels();
+            }
+            else
+            {
+                label_date.Text = dgv_eventos.SelectedCells[1].Value.ToString();
+                label_hora.Text = dgv_eventos.SelectedCells[2].Value.ToString();
+                label_placa.Text = dgv_eventos.SelectedCells[3].Value.ToString();
+                label_ejes.Text = dgv_eventos.SelectedCells[4].Value.ToString();
+                label_pesoini.Text = dgv_eventos.SelectedCells[5].Value.ToString();
+                label_pesofin.Text = dgv_eventos.SelectedCells[6].Value.ToString();
+                label_tara.Text = dgv_eventos.SelectedCells[7].Value.ToString();
+                label_neto.Text = dgv_eventos.SelectedCells[8].Value.ToString();
+
+                but_guardar.Enabled = false;
+                
             }
         }
+
 
 
     }

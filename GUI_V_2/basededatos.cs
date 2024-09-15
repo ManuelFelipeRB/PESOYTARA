@@ -7,7 +7,6 @@ using System.Text;
 using System.Linq;
 
 
-
 public partial class basededatos
 {
     public string fecha;
@@ -18,7 +17,6 @@ public partial class basededatos
     private string pesoini;
     private string pesofin;
     private string peso_neto;
-
 
 
     SqlConnection cnx = new SqlConnection(@"Data Source=DESKTOP-9HUMB1K\SQLEXPRESS;Initial Catalog=Pesos;Integrated Security=True;TrustServerCertificate=True");
@@ -36,7 +34,6 @@ public partial class basededatos
 
 
     }
-
     public basededatos()
     { }
 
@@ -62,14 +59,19 @@ public partial class basededatos
     }
     public void EventosdePesaje(DataGridView dgv_eventos)
     {
-        string consulta = "SELECT * FROM Eventos_Pesajes";
+        string consulta = "SELECT * FROM Eventos_Pesajes ORDER BY Num DESC";
+        
         cnx.Open();
         SqlDataAdapter datos = new SqlDataAdapter(consulta, cnx);
         DataTable dttabla = new DataTable();
         datos.Fill(dttabla);
         dgv_eventos.DataSource = dttabla;
+        
         cnx.Close();
 
     }
+
+
+
 }
 

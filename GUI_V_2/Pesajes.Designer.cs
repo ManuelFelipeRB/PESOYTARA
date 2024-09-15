@@ -75,22 +75,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.but_guardar = new System.Windows.Forms.Button();
             this.dgv_eventos = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.but_imprimir = new System.Windows.Forms.Button();
-            this.SerialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label_hora = new System.Windows.Forms.Label();
-            this.pesosDataSet = new GUI_V_2.PesosDataSet();
-            this.eventosPesajesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eventos_PesajesTableAdapter = new GUI_V_2.PesosDataSetTableAdapters.Eventos_PesajesTableAdapter();
             this.numDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,15 +84,31 @@
             this.pesofinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.taraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pesonetoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eventosPesajesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pesosDataSet = new GUI_V_2.PesosDataSet();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label_hora = new System.Windows.Forms.Label();
+            this.but_imprimir = new System.Windows.Forms.Button();
+            this.SerialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.eventos_PesajesTableAdapter = new GUI_V_2.PesosDataSetTableAdapters.Eventos_PesajesTableAdapter();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_eventos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosPesajesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pesosDataSet)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pesosDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventosPesajesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -117,7 +117,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label11.Location = new System.Drawing.Point(378, 124);
+            this.label11.Location = new System.Drawing.Point(196, 126);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(32, 15);
             this.label11.TabIndex = 73;
@@ -129,7 +129,7 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label18.Location = new System.Drawing.Point(214, 124);
+            this.label18.Location = new System.Drawing.Point(269, 126);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(114, 15);
             this.label18.TabIndex = 74;
@@ -141,10 +141,10 @@
             this.text_tara.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.text_tara.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_tara.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.text_tara.Location = new System.Drawing.Point(379, 144);
+            this.text_tara.Location = new System.Drawing.Point(189, 144);
             this.text_tara.Name = "text_tara";
-            this.text_tara.Size = new System.Drawing.Size(98, 27);
-            this.text_tara.TabIndex = 64;
+            this.text_tara.Size = new System.Drawing.Size(65, 27);
+            this.text_tara.TabIndex = 66;
             this.text_tara.Text = "0";
             this.text_tara.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.text_tara.TextChanged += new System.EventHandler(this.text_tara_TextChanged);
@@ -156,10 +156,10 @@
             this.text_item.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.text_item.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_item.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.text_item.Location = new System.Drawing.Point(217, 144);
+            this.text_item.Location = new System.Drawing.Point(272, 144);
             this.text_item.Name = "text_item";
-            this.text_item.Size = new System.Drawing.Size(135, 27);
-            this.text_item.TabIndex = 63;
+            this.text_item.Size = new System.Drawing.Size(111, 27);
+            this.text_item.TabIndex = 67;
             this.text_item.Text = "0";
             this.text_item.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.text_item.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_item_KeyPress);
@@ -177,12 +177,13 @@
             "Pesaje Inicial",
             "Pesaje Final",
             "Repesaje"});
-            this.comboBox_proceso.Location = new System.Drawing.Point(20, 89);
+            this.comboBox_proceso.Location = new System.Drawing.Point(20, 87);
             this.comboBox_proceso.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox_proceso.MaxDropDownItems = 6;
             this.comboBox_proceso.Name = "comboBox_proceso";
-            this.comboBox_proceso.Size = new System.Drawing.Size(263, 27);
+            this.comboBox_proceso.Size = new System.Drawing.Size(122, 27);
             this.comboBox_proceso.TabIndex = 61;
+            this.comboBox_proceso.Text = "Seleccione";
             this.comboBox_proceso.SelectedIndexChanged += new System.EventHandler(this.comboBox_proceso_SelectedIndexChanged);
             this.comboBox_proceso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_proceso_KeyPress);
             // 
@@ -192,7 +193,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(17, 70);
+            this.label5.Location = new System.Drawing.Point(17, 66);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 15);
             this.label5.TabIndex = 72;
@@ -205,10 +206,10 @@
             this.text_placa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.text_placa.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_placa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.text_placa.Location = new System.Drawing.Point(20, 29);
+            this.text_placa.Location = new System.Drawing.Point(20, 30);
             this.text_placa.MaxLength = 8;
             this.text_placa.Name = "text_placa";
-            this.text_placa.Size = new System.Drawing.Size(122, 31);
+            this.text_placa.Size = new System.Drawing.Size(133, 31);
             this.text_placa.TabIndex = 60;
             this.text_placa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.text_placa.TextChanged += new System.EventHandler(this.text_placa_TextChanged);
@@ -244,12 +245,13 @@
             this.text_observaciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.text_observaciones.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_observaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.text_observaciones.Location = new System.Drawing.Point(20, 197);
+            this.text_observaciones.Location = new System.Drawing.Point(20, 196);
             this.text_observaciones.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
             this.text_observaciones.MaxLength = 47;
             this.text_observaciones.Name = "text_observaciones";
-            this.text_observaciones.Size = new System.Drawing.Size(457, 27);
-            this.text_observaciones.TabIndex = 65;
+            this.text_observaciones.Size = new System.Drawing.Size(363, 27);
+            this.text_observaciones.TabIndex = 68;
+            this.text_observaciones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_observaciones_KeyPress);
             // 
             // label4
             // 
@@ -269,7 +271,7 @@
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label19.Location = new System.Drawing.Point(166, 12);
+            this.label19.Location = new System.Drawing.Point(151, 66);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(60, 15);
             this.label19.TabIndex = 70;
@@ -283,7 +285,7 @@
             this.panel2.Controls.Add(this.label22);
             this.panel2.Controls.Add(this.display_peso);
             this.panel2.Controls.Add(this.panel5);
-            this.panel2.Location = new System.Drawing.Point(29, 16);
+            this.panel2.Location = new System.Drawing.Point(58, 19);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(490, 134);
             this.panel2.TabIndex = 77;
@@ -304,7 +306,7 @@
             this.label22.BackColor = System.Drawing.Color.Gray;
             this.label22.Font = new System.Drawing.Font("DigitsDB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Cyan;
-            this.label22.Location = new System.Drawing.Point(211, 53);
+            this.label22.Location = new System.Drawing.Point(211, 59);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(34, 20);
             this.label22.TabIndex = 79;
@@ -332,9 +334,9 @@
             this.panel5.Controls.Add(this.but_conectar);
             this.panel5.Controls.Add(this.comboBox_bascula);
             this.panel5.Controls.Add(this.comboBox_puertos);
-            this.panel5.Location = new System.Drawing.Point(262, 22);
+            this.panel5.Location = new System.Drawing.Point(253, 22);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(213, 97);
+            this.panel5.Size = new System.Drawing.Size(222, 97);
             this.panel5.TabIndex = 96;
             // 
             // but_desconectar
@@ -342,7 +344,7 @@
             this.but_desconectar.BackColor = System.Drawing.Color.Gainsboro;
             this.but_desconectar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_desconectar.ForeColor = System.Drawing.Color.Black;
-            this.but_desconectar.Location = new System.Drawing.Point(115, 53);
+            this.but_desconectar.Location = new System.Drawing.Point(124, 54);
             this.but_desconectar.Name = "but_desconectar";
             this.but_desconectar.Size = new System.Drawing.Size(86, 27);
             this.but_desconectar.TabIndex = 21;
@@ -355,7 +357,7 @@
             this.but_conectar.BackColor = System.Drawing.Color.Gainsboro;
             this.but_conectar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_conectar.ForeColor = System.Drawing.Color.Black;
-            this.but_conectar.Location = new System.Drawing.Point(115, 17);
+            this.but_conectar.Location = new System.Drawing.Point(124, 17);
             this.but_conectar.Name = "but_conectar";
             this.but_conectar.Size = new System.Drawing.Size(86, 27);
             this.but_conectar.TabIndex = 87;
@@ -383,7 +385,7 @@
             "Salida 5"});
             this.comboBox_bascula.Location = new System.Drawing.Point(6, 54);
             this.comboBox_bascula.Name = "comboBox_bascula";
-            this.comboBox_bascula.Size = new System.Drawing.Size(100, 26);
+            this.comboBox_bascula.Size = new System.Drawing.Size(109, 26);
             this.comboBox_bascula.TabIndex = 86;
             this.comboBox_bascula.Text = "Seleccione";
             this.comboBox_bascula.SelectedIndexChanged += new System.EventHandler(this.comboBox_bascula_SelectedIndexChanged);
@@ -397,7 +399,7 @@
             this.comboBox_puertos.Location = new System.Drawing.Point(6, 17);
             this.comboBox_puertos.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox_puertos.Name = "comboBox_puertos";
-            this.comboBox_puertos.Size = new System.Drawing.Size(100, 26);
+            this.comboBox_puertos.Size = new System.Drawing.Size(109, 26);
             this.comboBox_puertos.TabIndex = 85;
             this.comboBox_puertos.Text = "Seleccione";
             this.comboBox_puertos.SelectedIndexChanged += new System.EventHandler(this.comboBox_puertos_SelectedIndexChanged);
@@ -411,17 +413,17 @@
             this.label_fecha.Name = "label_fecha";
             this.label_fecha.Size = new System.Drawing.Size(164, 32);
             this.label_fecha.TabIndex = 83;
-            this.label_fecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_fecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // but_capturar
             // 
             this.but_capturar.BackColor = System.Drawing.Color.Gainsboro;
             this.but_capturar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_capturar.ForeColor = System.Drawing.Color.Black;
-            this.but_capturar.Location = new System.Drawing.Point(396, 27);
+            this.but_capturar.Location = new System.Drawing.Point(302, 29);
             this.but_capturar.Name = "but_capturar";
             this.but_capturar.Size = new System.Drawing.Size(81, 33);
-            this.but_capturar.TabIndex = 67;
+            this.but_capturar.TabIndex = 69;
             this.but_capturar.Text = "Capturar";
             this.but_capturar.UseVisualStyleBackColor = false;
             this.but_capturar.Click += new System.EventHandler(this.but_capturar_Click);
@@ -432,10 +434,10 @@
             this.text_peso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.text_peso.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_peso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.text_peso.Location = new System.Drawing.Point(283, 27);
+            this.text_peso.Location = new System.Drawing.Point(180, 29);
             this.text_peso.Name = "text_peso";
             this.text_peso.ReadOnly = true;
-            this.text_peso.Size = new System.Drawing.Size(116, 33);
+            this.text_peso.Size = new System.Drawing.Size(129, 33);
             this.text_peso.TabIndex = 66;
             this.text_peso.TabStop = false;
             this.text_peso.Text = "0";
@@ -464,12 +466,13 @@
             "3S2",
             "3S3",
             "EXTRA"});
-            this.comboBox_ejes.Location = new System.Drawing.Point(169, 33);
+            this.comboBox_ejes.Location = new System.Drawing.Point(154, 87);
             this.comboBox_ejes.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox_ejes.MaxDropDownItems = 6;
             this.comboBox_ejes.Name = "comboBox_ejes";
-            this.comboBox_ejes.Size = new System.Drawing.Size(90, 27);
+            this.comboBox_ejes.Size = new System.Drawing.Size(100, 27);
             this.comboBox_ejes.TabIndex = 62;
+            this.comboBox_ejes.Text = "Seleccione";
             this.comboBox_ejes.SelectedIndexChanged += new System.EventHandler(this.comboBox_ejes_SelectedIndexChanged);
             this.comboBox_ejes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_ejes_KeyPress);
             // 
@@ -646,12 +649,12 @@
             this.label6.BackColor = System.Drawing.Color.Gray;
             this.label6.Font = new System.Drawing.Font("Dubai", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Cyan;
-            this.label6.Location = new System.Drawing.Point(20, 11);
+            this.label6.Location = new System.Drawing.Point(18, 11);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(295, 32);
             this.label6.TabIndex = 79;
             this.label6.Text = "TIQUETE DE BÁSCULA";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel3
             // 
@@ -673,7 +676,7 @@
             this.panel3.Controls.Add(this.label_placa);
             this.panel3.Controls.Add(this.label_pesoini);
             this.panel3.Controls.Add(this.label28);
-            this.panel3.Location = new System.Drawing.Point(20, 53);
+            this.panel3.Location = new System.Drawing.Point(18, 53);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(455, 124);
             this.panel3.TabIndex = 80;
@@ -717,13 +720,13 @@
             // 
             this.but_guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.but_guardar.BackColor = System.Drawing.Color.Gainsboro;
-            this.but_guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.but_guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkCyan;
             this.but_guardar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.but_guardar.Location = new System.Drawing.Point(928, 283);
+            this.but_guardar.Location = new System.Drawing.Point(890, 279);
             this.but_guardar.Name = "but_guardar";
             this.but_guardar.Size = new System.Drawing.Size(83, 50);
-            this.but_guardar.TabIndex = 12;
+            this.but_guardar.TabIndex = 70;
             this.but_guardar.Text = "Guardar";
             this.but_guardar.UseVisualStyleBackColor = false;
             this.but_guardar.Click += new System.EventHandler(this.but_guardar_Click);
@@ -748,203 +751,15 @@
             this.taraDataGridViewTextBoxColumn,
             this.pesonetoDataGridViewTextBoxColumn});
             this.dgv_eventos.DataSource = this.eventosPesajesBindingSource;
-            this.dgv_eventos.Location = new System.Drawing.Point(29, 363);
+            this.dgv_eventos.Location = new System.Drawing.Point(58, 366);
             this.dgv_eventos.Name = "dgv_eventos";
             this.dgv_eventos.ReadOnly = true;
             this.dgv_eventos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgv_eventos.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dgv_eventos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_eventos.Size = new System.Drawing.Size(995, 224);
+            this.dgv_eventos.Size = new System.Drawing.Size(915, 224);
             this.dgv_eventos.TabIndex = 81;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Controls.Add(this.label_hora);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.but_imprimir);
-            this.panel1.Controls.Add(this.but_guardar);
-            this.panel1.Controls.Add(this.dgv_eventos);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1050, 605);
-            this.panel1.TabIndex = 77;
-            // 
-            // panel6
-            // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.BackColor = System.Drawing.Color.Gray;
-            this.panel6.Controls.Add(this.but_capturar);
-            this.panel6.Controls.Add(this.text_observaciones);
-            this.panel6.Controls.Add(this.text_peso);
-            this.panel6.Controls.Add(this.comboBox1);
-            this.panel6.Controls.Add(this.label21);
-            this.panel6.Controls.Add(this.text_tara);
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.comboBox_proceso);
-            this.panel6.Controls.Add(this.comboBox_ejes);
-            this.panel6.Controls.Add(this.textBox1);
-            this.panel6.Controls.Add(this.text_placa);
-            this.panel6.Controls.Add(this.label19);
-            this.panel6.Controls.Add(this.textBox2);
-            this.panel6.Controls.Add(this.label20);
-            this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Controls.Add(this.text_item);
-            this.panel6.Controls.Add(this.label18);
-            this.panel6.Controls.Add(this.label11);
-            this.panel6.Location = new System.Drawing.Point(534, 16);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(490, 241);
-            this.panel6.TabIndex = 96;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox1.DisplayMember = "IdCategorias";
-            this.comboBox1.DropDownWidth = 90;
-            this.comboBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Carga Seca",
-            "Early EOL",
-            "Terminal MLT",
-            "",
-            ""});
-            this.comboBox1.Location = new System.Drawing.Point(319, 89);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.comboBox1.MaxDropDownItems = 6;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(158, 27);
-            this.comboBox1.TabIndex = 89;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(316, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 15);
-            this.label2.TabIndex = 90;
-            this.label2.Text = "Terminal";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(114, 144);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(65, 27);
-            this.textBox1.TabIndex = 91;
-            this.textBox1.Text = "0";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.Location = new System.Drawing.Point(20, 144);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(60, 27);
-            this.textBox2.TabIndex = 93;
-            this.textBox2.Text = "0";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(24, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 15);
-            this.label3.TabIndex = 92;
-            this.label3.Text = "GSV";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(120, 126);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 15);
-            this.label7.TabIndex = 94;
-            this.label7.Text = "A.P.I";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.label_fecha);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.panel3);
-            this.panel4.Location = new System.Drawing.Point(29, 156);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(490, 190);
-            this.panel4.TabIndex = 95;
-            // 
-            // but_imprimir
-            // 
-            this.but_imprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.but_imprimir.BackColor = System.Drawing.Color.Gainsboro;
-            this.but_imprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.but_imprimir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_imprimir.ForeColor = System.Drawing.Color.Black;
-            this.but_imprimir.Location = new System.Drawing.Point(825, 283);
-            this.but_imprimir.Name = "but_imprimir";
-            this.but_imprimir.Size = new System.Drawing.Size(83, 50);
-            this.but_imprimir.TabIndex = 22;
-            this.but_imprimir.Text = "Imprimir";
-            this.but_imprimir.UseVisualStyleBackColor = false;
-            // 
-            // SerialPort1
-            // 
-            this.SerialPort1.ErrorReceived += new System.IO.Ports.SerialErrorReceivedEventHandler(this.SerialPort1_ErrorReceived);
-            this.SerialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.SerialPort1_DataReceived);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label_hora
-            // 
-            this.label_hora.BackColor = System.Drawing.Color.Transparent;
-            this.label_hora.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.label_hora.ForeColor = System.Drawing.Color.Transparent;
-            this.label_hora.Location = new System.Drawing.Point(540, 270);
-            this.label_hora.Name = "label_hora";
-            this.label_hora.Size = new System.Drawing.Size(74, 25);
-            this.label_hora.TabIndex = 97;
-            this.label_hora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pesosDataSet
-            // 
-            this.pesosDataSet.DataSetName = "PesosDataSet";
-            this.pesosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-           
-            // 
-            // eventosPesajesBindingSource
-            // 
-            this.eventosPesajesBindingSource.DataMember = "Eventos_Pesajes";
-            this.eventosPesajesBindingSource.DataSource = this.pesosDataSet;
-            // 
-            // eventos_PesajesTableAdapter
-            // 
-            this.eventos_PesajesTableAdapter.ClearBeforeFill = true;
+            this.dgv_eventos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_eventos_CellClick);
             // 
             // numDataGridViewTextBoxColumn
             // 
@@ -1009,6 +824,195 @@
             this.pesonetoDataGridViewTextBoxColumn.Name = "pesonetoDataGridViewTextBoxColumn";
             this.pesonetoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // eventosPesajesBindingSource
+            // 
+            this.eventosPesajesBindingSource.DataMember = "Eventos_Pesajes";
+            this.eventosPesajesBindingSource.DataSource = this.pesosDataSet;
+            // 
+            // pesosDataSet
+            // 
+            this.pesosDataSet.DataSetName = "PesosDataSet";
+            this.pesosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.but_imprimir);
+            this.panel1.Controls.Add(this.but_guardar);
+            this.panel1.Controls.Add(this.dgv_eventos);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1050, 605);
+            this.panel1.TabIndex = 77;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.BackColor = System.Drawing.Color.Gray;
+            this.panel6.Controls.Add(this.but_capturar);
+            this.panel6.Controls.Add(this.text_observaciones);
+            this.panel6.Controls.Add(this.text_peso);
+            this.panel6.Controls.Add(this.comboBox1);
+            this.panel6.Controls.Add(this.label21);
+            this.panel6.Controls.Add(this.text_tara);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.comboBox_proceso);
+            this.panel6.Controls.Add(this.comboBox_ejes);
+            this.panel6.Controls.Add(this.textBox1);
+            this.panel6.Controls.Add(this.text_placa);
+            this.panel6.Controls.Add(this.label19);
+            this.panel6.Controls.Add(this.textBox2);
+            this.panel6.Controls.Add(this.label20);
+            this.panel6.Controls.Add(this.label3);
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.text_item);
+            this.panel6.Controls.Add(this.label18);
+            this.panel6.Controls.Add(this.label11);
+            this.panel6.Location = new System.Drawing.Point(564, 19);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(409, 241);
+            this.panel6.TabIndex = 96;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox1.DisplayMember = "IdCategorias";
+            this.comboBox1.DropDownWidth = 90;
+            this.comboBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.IntegralHeight = false;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Carga Seca",
+            "Early EOL",
+            "M.L.T."});
+            this.comboBox1.Location = new System.Drawing.Point(272, 87);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(6);
+            this.comboBox1.MaxDropDownItems = 6;
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(111, 27);
+            this.comboBox1.TabIndex = 63;
+            this.comboBox1.Text = "Seleccione";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(253, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 15);
+            this.label2.TabIndex = 90;
+            this.label2.Text = "Terminal";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox1.Location = new System.Drawing.Point(103, 144);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(65, 27);
+            this.textBox1.TabIndex = 65;
+            this.textBox1.Text = "0";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox2.Location = new System.Drawing.Point(20, 144);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(65, 27);
+            this.textBox2.TabIndex = 64;
+            this.textBox2.Text = "0";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Location = new System.Drawing.Point(24, 126);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(31, 15);
+            this.label3.TabIndex = 92;
+            this.label3.Text = "GSV";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label7.Location = new System.Drawing.Point(96, 126);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 15);
+            this.label7.TabIndex = 94;
+            this.label7.Text = "A.P.I";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.label_hora);
+            this.panel4.Controls.Add(this.label_fecha);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Location = new System.Drawing.Point(58, 159);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(490, 190);
+            this.panel4.TabIndex = 95;
+            // 
+            // label_hora
+            // 
+            this.label_hora.BackColor = System.Drawing.Color.Gray;
+            this.label_hora.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.label_hora.ForeColor = System.Drawing.Color.Transparent;
+            this.label_hora.Location = new System.Drawing.Point(399, 11);
+            this.label_hora.Name = "label_hora";
+            this.label_hora.Size = new System.Drawing.Size(74, 31);
+            this.label_hora.TabIndex = 97;
+            this.label_hora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // but_imprimir
+            // 
+            this.but_imprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.but_imprimir.BackColor = System.Drawing.Color.Gainsboro;
+            this.but_imprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkCyan;
+            this.but_imprimir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_imprimir.ForeColor = System.Drawing.Color.Black;
+            this.but_imprimir.Location = new System.Drawing.Point(774, 281);
+            this.but_imprimir.Name = "but_imprimir";
+            this.but_imprimir.Size = new System.Drawing.Size(83, 50);
+            this.but_imprimir.TabIndex = 71;
+            this.but_imprimir.Text = "Imprimir";
+            this.but_imprimir.UseVisualStyleBackColor = false;
+            // 
+            // SerialPort1
+            // 
+            this.SerialPort1.ErrorReceived += new System.IO.Ports.SerialErrorReceivedEventHandler(this.SerialPort1_ErrorReceived);
+            this.SerialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.SerialPort1_DataReceived);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // eventos_PesajesTableAdapter
+            // 
+            this.eventos_PesajesTableAdapter.ClearBeforeFill = true;
+            // 
             // Pesajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1023,12 +1027,12 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_eventos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosPesajesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pesosDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pesosDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventosPesajesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
