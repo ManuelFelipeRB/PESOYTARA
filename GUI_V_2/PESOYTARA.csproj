@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="basededatos.cs" />
     <Compile Include="Configuracion.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -74,6 +75,11 @@
     </Compile>
     <Compile Include="Pesajes.Designer.cs">
       <DependentUpon>Pesajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PesosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PesosDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,6 +117,17 @@
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="PesosDataSet.xsc">
+      <DependentUpon>PesosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PesosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PesosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PesosDataSet.xss">
+      <DependentUpon>PesosDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

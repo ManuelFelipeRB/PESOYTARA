@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PESOYTARA.Properties;
 using System.Data.SqlClient;
 using System.Runtime.Remoting.Messaging;
+using PESOYTARA;
 
 namespace PESOYTARA
 {

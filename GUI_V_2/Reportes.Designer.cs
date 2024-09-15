@@ -57,7 +57,7 @@
             // but_capturar
             // 
             this.but_capturar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.but_capturar.BackColor = System.Drawing.Color.DarkOrange;
+            this.but_capturar.BackColor = System.Drawing.Color.LightGray;
             this.but_capturar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_capturar.ForeColor = System.Drawing.Color.Black;
             this.but_capturar.Location = new System.Drawing.Point(220, 22);
@@ -80,7 +80,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.Controls.Add(this.text_usuario);
             this.Controls.Add(this.but_capturar);
             this.Controls.Add(this.flowLayoutPanel1);

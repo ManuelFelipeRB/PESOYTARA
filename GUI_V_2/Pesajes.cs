@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PESOYTARA;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,14 +12,16 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.CompilerServices;
+using System.Runtime.Remoting.Messaging;
 
 namespace PESOYTARA
 {
     public partial class Pesajes : UserControl
     {
-        private string datos;
+       // private string datos;
         public string puertoSeleccionado;
-        //private SqlConnection conexionSql;
+        private SqlConnection conexionSql;
         //private Loggin loggin;
         //private Reportes reportes;
         //private Configuracion configuracion;
@@ -29,22 +32,29 @@ namespace PESOYTARA
             InitializeComponent();
             ConfigureSerialPort();
             LoadComboBoxPuertos();
+            InitializeDatabaseConnection();
             timer1.Enabled = true;
             // Inicializa el UserControl Loggin y lo añade al formulario actual
-            //Loggin userControl = new Loggin
-            //{
-            //    ParentForm = this
-            //};
-            //this.Controls.Add(userControl);
-            //SerialPort1 = new SerialPort();
+            Loggin userControl = new Loggin();
+
+            this.Controls.Add(userControl);
+            SerialPort1 = new SerialPort();
         }
 
+        private void Pesajes_Load(object sender, EventArgs e)
+        {
+            
+           
+        }
         public void LoadComboBoxPuertos()
         {
             string[] puertos = SerialPort.GetPortNames();
             comboBox_puertos.Items.AddRange(puertos);
         }
-
+        private void InitializeDatabaseConnection()
+        {
+            conexionSql = new SqlConnection(@"Data Source=DESKTOP-9HUMB1K\SQLEXPRESS;Initial Catalog=Pesos;Integrated Security=True;TrustServerCertificate=True");
+        }
         public void ConfigureSerialPort()
         {
             SerialPort1.PortName = comboBox_puertos.Text;
@@ -64,6 +74,7 @@ namespace PESOYTARA
             but_conectar.Enabled = !connected;
             text_placa.Focus();
         }
+
 
         public void but_desconectar_Click(object sender, EventArgs e)
         {
@@ -152,15 +163,29 @@ namespace PESOYTARA
             }
             else
             {
+                string fecha = label_date.Text;
+                string hora = label_hora.Text;
+                string placa = label_placa.Text;
+                string ejes = label_ejes.Text;
+                string pesoini = label_pesoini.Text;
+                string pesofin = label_pesofin.Text;
+                string tara = label_tara.Text;
+                string peso_neto = label_neto.Text;
+                //DateTime dia = DateTime.Parse(fecha);
+                //DateTime tiemp = DateTime.Parse(hora);
 
-            
-            // Aquí iría el código para guardar los datos en la base de datos
-            // basededatos nuevoevento = new basededatos(fecha, hora, placa, ejes, pesoini, pesofin, tara, peso_neto);
-            // int fila = nuevoevento.addeventopesaje();
-            // if (fila == 1)
-            // {
-            MessageBox.Show("Evento Guardado", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            LimpiarDatos();
+                basededatos nuevoevento = new basededatos(fecha, hora, placa, ejes, pesoini, pesofin, tara, peso_neto);
+
+                int fila = nuevoevento.addeventopesaje();
+
+                if (fila == 1)
+                {
+                    MessageBox.Show("Evento Guardado", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    basededatos evento = new basededatos();
+                    evento.EventosdePesaje(dgv_eventos);
+                    LimpiarDatos();
+                }
+
             }
         }
 
@@ -320,7 +345,7 @@ namespace PESOYTARA
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //label_hora.Text = DateTime.Now.ToString("hh:mm tt");
+            label_hora.Text = DateTime.Now.ToString("hh:mm tt");
             label_fecha.Text = DateTime.Now.ToShortDateString();
         }
 
@@ -350,6 +375,7 @@ namespace PESOYTARA
                 }
             }
         }
+
 
     }
 

@@ -213,7 +213,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -244,7 +244,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkOrange;
+            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(940, 132);
@@ -256,7 +256,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkOrange;
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(475, 119);
@@ -268,7 +268,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkOrange;
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(475, 190);
@@ -280,7 +280,7 @@
             // 
             // but_capturar
             // 
-            this.but_capturar.BackColor = System.Drawing.Color.DarkOrange;
+            this.but_capturar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.but_capturar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_capturar.ForeColor = System.Drawing.Color.Black;
             this.but_capturar.Location = new System.Drawing.Point(475, 53);

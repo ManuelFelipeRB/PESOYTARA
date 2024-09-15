@@ -87,6 +87,19 @@
             this.but_imprimir = new System.Windows.Forms.Button();
             this.SerialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label_hora = new System.Windows.Forms.Label();
+            this.pesosDataSet = new GUI_V_2.PesosDataSet();
+            this.eventosPesajesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eventos_PesajesTableAdapter = new GUI_V_2.PesosDataSetTableAdapters.Eventos_PesajesTableAdapter();
+            this.numDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.placaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ejesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pesoiniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pesofinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pesonetoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -94,6 +107,8 @@
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pesosDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosPesajesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -191,7 +206,7 @@
             this.text_placa.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_placa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.text_placa.Location = new System.Drawing.Point(20, 29);
-            this.text_placa.MaxLength = 6;
+            this.text_placa.MaxLength = 8;
             this.text_placa.Name = "text_placa";
             this.text_placa.Size = new System.Drawing.Size(122, 31);
             this.text_placa.TabIndex = 60;
@@ -361,12 +376,12 @@
             this.comboBox_bascula.FormattingEnabled = true;
             this.comboBox_bascula.IntegralHeight = false;
             this.comboBox_bascula.Items.AddRange(new object[] {
-            "Entrada  1",
+            "Entrada 1",
             "Entrada 2",
             "Salida 3",
             "Salida 4",
             "Salida 5"});
-            this.comboBox_bascula.Location = new System.Drawing.Point(6, 17);
+            this.comboBox_bascula.Location = new System.Drawing.Point(6, 54);
             this.comboBox_bascula.Name = "comboBox_bascula";
             this.comboBox_bascula.Size = new System.Drawing.Size(100, 26);
             this.comboBox_bascula.TabIndex = 86;
@@ -379,7 +394,7 @@
             this.comboBox_puertos.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_puertos.ForeColor = System.Drawing.Color.Black;
             this.comboBox_puertos.FormattingEnabled = true;
-            this.comboBox_puertos.Location = new System.Drawing.Point(6, 54);
+            this.comboBox_puertos.Location = new System.Drawing.Point(6, 17);
             this.comboBox_puertos.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox_puertos.Name = "comboBox_puertos";
             this.comboBox_puertos.Size = new System.Drawing.Size(100, 26);
@@ -392,9 +407,9 @@
             this.label_fecha.BackColor = System.Drawing.Color.Gray;
             this.label_fecha.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.label_fecha.ForeColor = System.Drawing.Color.Cyan;
-            this.label_fecha.Location = new System.Drawing.Point(300, 11);
+            this.label_fecha.Location = new System.Drawing.Point(311, 11);
             this.label_fecha.Name = "label_fecha";
-            this.label_fecha.Size = new System.Drawing.Size(175, 32);
+            this.label_fecha.Size = new System.Drawing.Size(164, 32);
             this.label_fecha.TabIndex = 83;
             this.label_fecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -403,9 +418,9 @@
             this.but_capturar.BackColor = System.Drawing.Color.Gainsboro;
             this.but_capturar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_capturar.ForeColor = System.Drawing.Color.Black;
-            this.but_capturar.Location = new System.Drawing.Point(396, 25);
+            this.but_capturar.Location = new System.Drawing.Point(396, 27);
             this.but_capturar.Name = "but_capturar";
-            this.but_capturar.Size = new System.Drawing.Size(81, 35);
+            this.but_capturar.Size = new System.Drawing.Size(81, 33);
             this.but_capturar.TabIndex = 67;
             this.but_capturar.Text = "Capturar";
             this.but_capturar.UseVisualStyleBackColor = false;
@@ -662,7 +677,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(455, 124);
             this.panel3.TabIndex = 80;
-            
             // 
             // label_date
             // 
@@ -721,7 +735,19 @@
             this.dgv_eventos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_eventos.AutoGenerateColumns = false;
             this.dgv_eventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_eventos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.numDataGridViewTextBoxColumn,
+            this.fechaDataGridViewTextBoxColumn,
+            this.horaDataGridViewTextBoxColumn,
+            this.placaDataGridViewTextBoxColumn,
+            this.ejesDataGridViewTextBoxColumn,
+            this.pesoiniDataGridViewTextBoxColumn,
+            this.pesofinDataGridViewTextBoxColumn,
+            this.taraDataGridViewTextBoxColumn,
+            this.pesonetoDataGridViewTextBoxColumn});
+            this.dgv_eventos.DataSource = this.eventosPesajesBindingSource;
             this.dgv_eventos.Location = new System.Drawing.Point(29, 363);
             this.dgv_eventos.Name = "dgv_eventos";
             this.dgv_eventos.ReadOnly = true;
@@ -734,6 +760,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.label_hora);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.but_imprimir);
@@ -745,7 +772,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1050, 605);
             this.panel1.TabIndex = 77;
-           
             // 
             // panel6
             // 
@@ -894,6 +920,95 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label_hora
+            // 
+            this.label_hora.BackColor = System.Drawing.Color.Transparent;
+            this.label_hora.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.label_hora.ForeColor = System.Drawing.Color.Transparent;
+            this.label_hora.Location = new System.Drawing.Point(540, 270);
+            this.label_hora.Name = "label_hora";
+            this.label_hora.Size = new System.Drawing.Size(74, 25);
+            this.label_hora.TabIndex = 97;
+            this.label_hora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pesosDataSet
+            // 
+            this.pesosDataSet.DataSetName = "PesosDataSet";
+            this.pesosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+           
+            // 
+            // eventosPesajesBindingSource
+            // 
+            this.eventosPesajesBindingSource.DataMember = "Eventos_Pesajes";
+            this.eventosPesajesBindingSource.DataSource = this.pesosDataSet;
+            // 
+            // eventos_PesajesTableAdapter
+            // 
+            this.eventos_PesajesTableAdapter.ClearBeforeFill = true;
+            // 
+            // numDataGridViewTextBoxColumn
+            // 
+            this.numDataGridViewTextBoxColumn.DataPropertyName = "Num";
+            this.numDataGridViewTextBoxColumn.HeaderText = "Num";
+            this.numDataGridViewTextBoxColumn.Name = "numDataGridViewTextBoxColumn";
+            this.numDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // horaDataGridViewTextBoxColumn
+            // 
+            this.horaDataGridViewTextBoxColumn.DataPropertyName = "Hora";
+            this.horaDataGridViewTextBoxColumn.HeaderText = "Hora";
+            this.horaDataGridViewTextBoxColumn.Name = "horaDataGridViewTextBoxColumn";
+            this.horaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // placaDataGridViewTextBoxColumn
+            // 
+            this.placaDataGridViewTextBoxColumn.DataPropertyName = "Placa";
+            this.placaDataGridViewTextBoxColumn.HeaderText = "Placa";
+            this.placaDataGridViewTextBoxColumn.Name = "placaDataGridViewTextBoxColumn";
+            this.placaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ejesDataGridViewTextBoxColumn
+            // 
+            this.ejesDataGridViewTextBoxColumn.DataPropertyName = "Ejes";
+            this.ejesDataGridViewTextBoxColumn.HeaderText = "Ejes";
+            this.ejesDataGridViewTextBoxColumn.Name = "ejesDataGridViewTextBoxColumn";
+            this.ejesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pesoiniDataGridViewTextBoxColumn
+            // 
+            this.pesoiniDataGridViewTextBoxColumn.DataPropertyName = "Peso_ini";
+            this.pesoiniDataGridViewTextBoxColumn.HeaderText = "Peso_ini";
+            this.pesoiniDataGridViewTextBoxColumn.Name = "pesoiniDataGridViewTextBoxColumn";
+            this.pesoiniDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pesofinDataGridViewTextBoxColumn
+            // 
+            this.pesofinDataGridViewTextBoxColumn.DataPropertyName = "Peso_fin";
+            this.pesofinDataGridViewTextBoxColumn.HeaderText = "Peso_fin";
+            this.pesofinDataGridViewTextBoxColumn.Name = "pesofinDataGridViewTextBoxColumn";
+            this.pesofinDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // taraDataGridViewTextBoxColumn
+            // 
+            this.taraDataGridViewTextBoxColumn.DataPropertyName = "Tara";
+            this.taraDataGridViewTextBoxColumn.HeaderText = "Tara";
+            this.taraDataGridViewTextBoxColumn.Name = "taraDataGridViewTextBoxColumn";
+            this.taraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pesonetoDataGridViewTextBoxColumn
+            // 
+            this.pesonetoDataGridViewTextBoxColumn.DataPropertyName = "Peso_neto";
+            this.pesonetoDataGridViewTextBoxColumn.HeaderText = "Peso_neto";
+            this.pesonetoDataGridViewTextBoxColumn.Name = "pesonetoDataGridViewTextBoxColumn";
+            this.pesonetoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Pesajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -901,6 +1016,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Pesajes";
             this.Size = new System.Drawing.Size(1050, 605);
+            this.Load += new System.EventHandler(this.Pesajes_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -911,6 +1027,8 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pesosDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosPesajesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -975,5 +1093,18 @@
         private System.Windows.Forms.Label label_date;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label_hora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn placaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ejesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pesoiniDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pesofinDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn taraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pesonetoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource eventosPesajesBindingSource;
+        private GUI_V_2.PesosDataSet pesosDataSet;
+        private GUI_V_2.PesosDataSetTableAdapters.Eventos_PesajesTableAdapter eventos_PesajesTableAdapter;
     }
 }
