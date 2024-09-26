@@ -20,7 +20,7 @@ namespace PESOYTARA
 {
     public partial class Pesajes : UserControl
     {
-       // private string datos;
+        // private string datos;
         public string puertoSeleccionado;
         private SqlConnection conexionSql;
         //private Loggin loggin;
@@ -60,7 +60,7 @@ namespace PESOYTARA
         public void ConfigureSerialPort()
         {
             SerialPort1.PortName = comboBox_puertos.Text;
-            SerialPort1.BaudRate = 9600;
+            SerialPort1.BaudRate = 115200;
             SerialPort1.Parity = Parity.None;
             SerialPort1.DataBits = 8;
             SerialPort1.StopBits = StopBits.One;
@@ -160,7 +160,7 @@ namespace PESOYTARA
             }
         }
 
-        
+
 
 
         private bool IsValidData(string data)
@@ -405,12 +405,14 @@ namespace PESOYTARA
                 label_neto.Text = dgv_eventos.SelectedCells[8].Value.ToString();
 
                 but_guardar.Enabled = false;
-                
+
             }
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
-
+        }
     }
 
 }
