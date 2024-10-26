@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO.Ports;
-using peso_y_tara.Properties;
 
 
 namespace PESOYTARA
@@ -39,14 +38,14 @@ namespace PESOYTARA
                 MenuVertical.Width = 70;
 
                 // Cambiar la imagen del botón al estado contraído
-                btnMenu.Image = peso_y_tara.Properties.Resources.Chevron_Right; // Reemplaza con tu recurso RIGHT
+                //btnMenu.Image = Properties.Resources.Chevron_Right; // Reemplaza con tu recurso RIGHT
             }
             else
             {
                 MenuVertical.Width = 250;
 
                 // Cambiar la imagen del botón al estado expandido
-                btnMenu.Image = peso_y_tara.Properties.Resources.Chevron_Left; // Reemplaza con tu recurso LEFT
+                //btnMenu.Image = Properties.Resources.Chevron_Left; // Reemplaza con tu recurso LEFT
             }
         }
         private void timer1_Tick(object sender, EventArgs e)

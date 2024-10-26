@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace peso_y_tara {
+namespace GUI_V_2 {
     
     
     /// <summary>
@@ -811,7 +811,7 @@ namespace peso_y_tara {
         }
     }
 }
-namespace peso_y_tara.PesosDataSetTableAdapters {
+namespace GUI_V_2.PesosDataSetTableAdapters {
     
     
     /// <summary>
@@ -1000,7 +1000,7 @@ SELECT Num, Fecha, Hora, Placa, Ejes, Peso_ini, Peso_fin, Tara, Peso_neto FROM E
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::peso_y_tara.Properties.Settings.Default.PesosConnectionString1;
+            this._connection.ConnectionString = global::GUI_V_2.Properties.Settings.Default.PesosConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

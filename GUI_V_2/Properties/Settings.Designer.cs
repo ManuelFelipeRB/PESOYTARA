@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace peso_y_tara.Properties {
+namespace GUI_V_2.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
