@@ -75,23 +75,19 @@
             this.label8 = new System.Windows.Forms.Label();
             this.but_guardar = new System.Windows.Forms.Button();
             this.dgv_eventos = new System.Windows.Forms.DataGridView();
-            this.numDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ejesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pesoiniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pesofinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.taraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pesonetoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eventosPesajesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pesosDataSet = new GUI_V_2.PesosDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.text_iso = new System.Windows.Forms.TextBox();
+            this.text_bsw = new System.Windows.Forms.TextBox();
+            this.text_nsv = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.text_gsv = new System.Windows.Forms.TextBox();
+            this.text_api = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -99,22 +95,15 @@
             this.but_imprimir = new System.Windows.Forms.Button();
             this.SerialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.eventos_PesajesTableAdapter = new GUI_V_2.PesosDataSetTableAdapters.Eventos_PesajesTableAdapter();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.eventosPesajesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_eventos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventosPesajesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pesosDataSet)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosPesajesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -292,7 +281,7 @@
             this.panel2.Controls.Add(this.label22);
             this.panel2.Controls.Add(this.display_peso);
             this.panel2.Controls.Add(this.panel5);
-            this.panel2.Location = new System.Drawing.Point(442, 24);
+            this.panel2.Location = new System.Drawing.Point(444, 24);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(490, 134);
             this.panel2.TabIndex = 77;
@@ -747,16 +736,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_eventos.AutoGenerateColumns = false;
             this.dgv_eventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_eventos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numDataGridViewTextBoxColumn,
-            this.fechaDataGridViewTextBoxColumn,
-            this.horaDataGridViewTextBoxColumn,
-            this.placaDataGridViewTextBoxColumn,
-            this.ejesDataGridViewTextBoxColumn,
-            this.pesoiniDataGridViewTextBoxColumn,
-            this.pesofinDataGridViewTextBoxColumn,
-            this.taraDataGridViewTextBoxColumn,
-            this.pesonetoDataGridViewTextBoxColumn});
             this.dgv_eventos.DataSource = this.eventosPesajesBindingSource;
             this.dgv_eventos.Location = new System.Drawing.Point(27, 366);
             this.dgv_eventos.Name = "dgv_eventos";
@@ -767,79 +746,6 @@
             this.dgv_eventos.Size = new System.Drawing.Size(1003, 224);
             this.dgv_eventos.TabIndex = 81;
             this.dgv_eventos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_eventos_CellClick);
-            // 
-            // numDataGridViewTextBoxColumn
-            // 
-            this.numDataGridViewTextBoxColumn.DataPropertyName = "Num";
-            this.numDataGridViewTextBoxColumn.HeaderText = "Num";
-            this.numDataGridViewTextBoxColumn.Name = "numDataGridViewTextBoxColumn";
-            this.numDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechaDataGridViewTextBoxColumn
-            // 
-            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
-            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // horaDataGridViewTextBoxColumn
-            // 
-            this.horaDataGridViewTextBoxColumn.DataPropertyName = "Hora";
-            this.horaDataGridViewTextBoxColumn.HeaderText = "Hora";
-            this.horaDataGridViewTextBoxColumn.Name = "horaDataGridViewTextBoxColumn";
-            this.horaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // placaDataGridViewTextBoxColumn
-            // 
-            this.placaDataGridViewTextBoxColumn.DataPropertyName = "Placa";
-            this.placaDataGridViewTextBoxColumn.HeaderText = "Placa";
-            this.placaDataGridViewTextBoxColumn.Name = "placaDataGridViewTextBoxColumn";
-            this.placaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ejesDataGridViewTextBoxColumn
-            // 
-            this.ejesDataGridViewTextBoxColumn.DataPropertyName = "Ejes";
-            this.ejesDataGridViewTextBoxColumn.HeaderText = "Ejes";
-            this.ejesDataGridViewTextBoxColumn.Name = "ejesDataGridViewTextBoxColumn";
-            this.ejesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pesoiniDataGridViewTextBoxColumn
-            // 
-            this.pesoiniDataGridViewTextBoxColumn.DataPropertyName = "Peso_ini";
-            this.pesoiniDataGridViewTextBoxColumn.HeaderText = "Peso_ini";
-            this.pesoiniDataGridViewTextBoxColumn.Name = "pesoiniDataGridViewTextBoxColumn";
-            this.pesoiniDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pesofinDataGridViewTextBoxColumn
-            // 
-            this.pesofinDataGridViewTextBoxColumn.DataPropertyName = "Peso_fin";
-            this.pesofinDataGridViewTextBoxColumn.HeaderText = "Peso_fin";
-            this.pesofinDataGridViewTextBoxColumn.Name = "pesofinDataGridViewTextBoxColumn";
-            this.pesofinDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // taraDataGridViewTextBoxColumn
-            // 
-            this.taraDataGridViewTextBoxColumn.DataPropertyName = "Tara";
-            this.taraDataGridViewTextBoxColumn.HeaderText = "Tara";
-            this.taraDataGridViewTextBoxColumn.Name = "taraDataGridViewTextBoxColumn";
-            this.taraDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pesonetoDataGridViewTextBoxColumn
-            // 
-            this.pesonetoDataGridViewTextBoxColumn.DataPropertyName = "Peso_neto";
-            this.pesonetoDataGridViewTextBoxColumn.HeaderText = "Peso_neto";
-            this.pesonetoDataGridViewTextBoxColumn.Name = "pesonetoDataGridViewTextBoxColumn";
-            this.pesonetoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // eventosPesajesBindingSource
-            // 
-            this.eventosPesajesBindingSource.DataMember = "Eventos_Pesajes";
-            this.eventosPesajesBindingSource.DataSource = this.pesosDataSet;
-            // 
-            // pesosDataSet
-            // 
-            this.pesosDataSet.DataSetName = "PesosDataSet";
-            this.pesosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -860,10 +766,11 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Gray;
+            this.panel6.Controls.Add(this.label15);
             this.panel6.Controls.Add(this.label14);
-            this.panel6.Controls.Add(this.textBox5);
-            this.panel6.Controls.Add(this.textBox3);
-            this.panel6.Controls.Add(this.textBox4);
+            this.panel6.Controls.Add(this.text_iso);
+            this.panel6.Controls.Add(this.text_bsw);
+            this.panel6.Controls.Add(this.text_nsv);
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.label13);
             this.panel6.Controls.Add(this.but_capturar);
@@ -875,10 +782,10 @@
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.comboBox_proceso);
             this.panel6.Controls.Add(this.comboBox_ejes);
-            this.panel6.Controls.Add(this.textBox1);
+            this.panel6.Controls.Add(this.text_gsv);
             this.panel6.Controls.Add(this.text_placa);
             this.panel6.Controls.Add(this.label19);
-            this.panel6.Controls.Add(this.textBox2);
+            this.panel6.Controls.Add(this.text_api);
             this.panel6.Controls.Add(this.label20);
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.label7);
@@ -890,6 +797,93 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(409, 330);
             this.panel6.TabIndex = 96;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(239, 11);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(35, 15);
+            this.label15.TabIndex = 101;
+            this.label15.Text = "Peso";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label14.Location = new System.Drawing.Point(253, 193);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(71, 15);
+            this.label14.TabIndex = 100;
+            this.label14.Text = "# Isotanque";
+            // 
+            // text_iso
+            // 
+            this.text_iso.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.text_iso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.text_iso.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_iso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.text_iso.Location = new System.Drawing.Point(256, 211);
+            this.text_iso.Name = "text_iso";
+            this.text_iso.Size = new System.Drawing.Size(127, 27);
+            this.text_iso.TabIndex = 99;
+            this.text_iso.Text = "0";
+            this.text_iso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // text_bsw
+            // 
+            this.text_bsw.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.text_bsw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.text_bsw.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_bsw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.text_bsw.Location = new System.Drawing.Point(318, 144);
+            this.text_bsw.Name = "text_bsw";
+            this.text_bsw.Size = new System.Drawing.Size(65, 27);
+            this.text_bsw.TabIndex = 96;
+            this.text_bsw.Text = "0";
+            this.text_bsw.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // text_nsv
+            // 
+            this.text_nsv.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.text_nsv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.text_nsv.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_nsv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.text_nsv.Location = new System.Drawing.Point(212, 144);
+            this.text_nsv.Name = "text_nsv";
+            this.text_nsv.Size = new System.Drawing.Size(65, 27);
+            this.text_nsv.TabIndex = 95;
+            this.text_nsv.Text = "0";
+            this.text_nsv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label12.Location = new System.Drawing.Point(209, 126);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(37, 15);
+            this.label12.TabIndex = 97;
+            this.label12.Text = "N.S.V";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label13.Location = new System.Drawing.Point(310, 126);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(40, 15);
+            this.label13.TabIndex = 98;
+            this.label13.Text = "B.S.W";
             // 
             // comboBox1
             // 
@@ -924,33 +918,33 @@
             this.label2.TabIndex = 90;
             this.label2.Text = "Terminal";
             // 
-            // textBox1
+            // text_gsv
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(103, 144);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(65, 27);
-            this.textBox1.TabIndex = 65;
-            this.textBox1.Text = "0";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.text_gsv.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.text_gsv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.text_gsv.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_gsv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.text_gsv.Location = new System.Drawing.Point(116, 144);
+            this.text_gsv.Name = "text_gsv";
+            this.text_gsv.Size = new System.Drawing.Size(65, 27);
+            this.text_gsv.TabIndex = 65;
+            this.text_gsv.Text = "0";
+            this.text_gsv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.text_gsv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // textBox2
+            // text_api
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.Location = new System.Drawing.Point(20, 144);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(65, 27);
-            this.textBox2.TabIndex = 64;
-            this.textBox2.Text = "0";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.text_api.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.text_api.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.text_api.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_api.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.text_api.Location = new System.Drawing.Point(20, 144);
+            this.text_api.Name = "text_api";
+            this.text_api.Size = new System.Drawing.Size(65, 27);
+            this.text_api.TabIndex = 64;
+            this.text_api.Text = "0";
+            this.text_api.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.text_api.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label3
             // 
@@ -958,11 +952,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(111, 126);
+            this.label3.Location = new System.Drawing.Point(122, 126);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 15);
+            this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 92;
-            this.label3.Text = "GSV";
+            this.label3.Text = "G.S.V";
             // 
             // label7
             // 
@@ -984,7 +978,7 @@
             this.panel4.Controls.Add(this.label_fecha);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.panel3);
-            this.panel4.Location = new System.Drawing.Point(442, 164);
+            this.panel4.Location = new System.Drawing.Point(444, 164);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(490, 190);
             this.panel4.TabIndex = 95;
@@ -1023,85 +1017,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // eventos_PesajesTableAdapter
-            // 
-            this.eventos_PesajesTableAdapter.ClearBeforeFill = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox3.Location = new System.Drawing.Point(272, 144);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(95, 27);
-            this.textBox3.TabIndex = 96;
-            this.textBox3.Text = "0";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox4.Location = new System.Drawing.Point(189, 144);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(65, 27);
-            this.textBox4.TabIndex = 95;
-            this.textBox4.Text = "0";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label12.Location = new System.Drawing.Point(186, 126);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(31, 15);
-            this.label12.TabIndex = 97;
-            this.label12.Text = "NSV";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label13.Location = new System.Drawing.Point(295, 126);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(34, 15);
-            this.label13.TabIndex = 98;
-            this.label13.Text = "BSW";
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox5.Location = new System.Drawing.Point(256, 211);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(127, 27);
-            this.textBox5.TabIndex = 99;
-            this.textBox5.Text = "0";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label14.Location = new System.Drawing.Point(253, 193);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(71, 15);
-            this.label14.TabIndex = 100;
-            this.label14.Text = "# Isotanque";
-            // 
             // Pesajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1116,12 +1031,11 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_eventos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventosPesajesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pesosDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.eventosPesajesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1176,9 +1090,9 @@
         private System.Windows.Forms.Button but_imprimir;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox text_api;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox text_gsv;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label8;
@@ -1187,23 +1101,13 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label_hora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn horaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn placaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ejesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pesoiniDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pesofinDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn taraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pesonetoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource eventosPesajesBindingSource;
-        private GUI_V_2.PesosDataSet pesosDataSet;
-        private GUI_V_2.PesosDataSetTableAdapters.Eventos_PesajesTableAdapter eventos_PesajesTableAdapter;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox text_iso;
+        private System.Windows.Forms.TextBox text_bsw;
+        private System.Windows.Forms.TextBox text_nsv;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
     }
 }

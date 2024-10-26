@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GUI_V_2.Properties {
+namespace peso_y_tara.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace GUI_V_2.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GUI_V_2.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("peso_y_tara.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -65,7 +65,7 @@ namespace GUI_V_2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Chevron_Left {
             get {
-                object obj = ResourceManager.GetObject("Chevron Left", resourceCulture);
+                object obj = ResourceManager.GetObject("Chevron_Left", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,17 +75,7 @@ namespace GUI_V_2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Chevron_Right {
             get {
-                object obj = ResourceManager.GetObject("Chevron Right", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMO2 {
-            get {
-                object obj = ResourceManager.GetObject("IMO2", resourceCulture);
+                object obj = ResourceManager.GetObject("Chevron_Right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
