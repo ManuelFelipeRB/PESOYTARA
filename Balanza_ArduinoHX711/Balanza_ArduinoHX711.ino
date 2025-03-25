@@ -1,27 +1,14 @@
-#include "HX711.h"
-
-const int DOUT=A0;
-const int CLK=A1;
-
-HX711 balanza;
 
 void setup() {
   Serial.begin(9600);
-  balanza.begin(DOUT, CLK);
-  Serial.print("Lectura del valor del ADC:  ");
-  Serial.println(balanza.read());
-  Serial.println("No ponga ningun  objeto sobre la balanza");
-  Serial.println("Destarando...");
-  Serial.println("...");
-  balanza.set_scale(753.25); // Establecemos la escala
-  balanza.tare(5);  //El peso actual es considerado Tara.
-  
-  Serial.println("Listo para pesar");  
+  randomSeed(analogRead(A0)); // Inicializa la semilla aleatoria con ruido analógico
 }
 
 void loop() {
-  //Serial.print("Peso: ");
-  Serial.println(balanza.get_units(5),0);
-  //Serial.println("gr");
-  delay(500);
+  int randomNum = random(2000, 4501) * 10; // Genera múltiplos de 10 entre 10000 y 45000
+  if (randomNum > 0) { 
+    Serial.println(randomNum); // Imprime el número si es positivo
+  }
+  delay(900); // Espera 600 ms antes de generar otro número
 }
+

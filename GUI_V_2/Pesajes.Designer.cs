@@ -29,6 +29,7 @@
         public void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pesajes));
             this.label11 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.text_tara = new System.Windows.Forms.TextBox();
@@ -85,9 +86,15 @@
             this.taraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pesonetoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eventosPesajesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pesosDataSet = new GUI_V_2.PesosDataSet();
+            this.pesosDataSet = new Peso_y_Tara.PesosDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -99,13 +106,8 @@
             this.but_imprimir = new System.Windows.Forms.Button();
             this.SerialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.eventos_PesajesTableAdapter = new GUI_V_2.PesosDataSetTableAdapters.Eventos_PesajesTableAdapter();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.eventos_PesajesTableAdapter = new Peso_y_Tara.PesosDataSetTableAdapters.Eventos_PesajesTableAdapter();
+            this.but_cancelar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -726,15 +728,15 @@
             // but_guardar
             // 
             this.but_guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.but_guardar.BackColor = System.Drawing.Color.Gainsboro;
+            this.but_guardar.BackColor = System.Drawing.Color.Gray;
             this.but_guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkCyan;
             this.but_guardar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.but_guardar.Location = new System.Drawing.Point(947, 24);
+            this.but_guardar.Image = ((System.Drawing.Image)(resources.GetObject("but_guardar.Image")));
+            this.but_guardar.Location = new System.Drawing.Point(952, 24);
             this.but_guardar.Name = "but_guardar";
-            this.but_guardar.Size = new System.Drawing.Size(83, 50);
+            this.but_guardar.Size = new System.Drawing.Size(78, 70);
             this.but_guardar.TabIndex = 70;
-            this.but_guardar.Text = "Guardar";
+            this.but_guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.but_guardar.UseVisualStyleBackColor = false;
             this.but_guardar.Click += new System.EventHandler(this.but_guardar_Click);
             // 
@@ -843,7 +845,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.but_cancelar);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.but_imprimir);
@@ -890,6 +893,81 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(409, 330);
             this.panel6.TabIndex = 96;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label14.Location = new System.Drawing.Point(253, 193);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(71, 15);
+            this.label14.TabIndex = 100;
+            this.label14.Text = "# Isotanque";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox5.Location = new System.Drawing.Point(256, 211);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(127, 27);
+            this.textBox5.TabIndex = 99;
+            this.textBox5.Text = "0";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox3.Location = new System.Drawing.Point(272, 144);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(95, 27);
+            this.textBox3.TabIndex = 96;
+            this.textBox3.Text = "0";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox4.Location = new System.Drawing.Point(189, 144);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(65, 27);
+            this.textBox4.TabIndex = 95;
+            this.textBox4.Text = "0";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label12.Location = new System.Drawing.Point(186, 126);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(31, 15);
+            this.label12.TabIndex = 97;
+            this.label12.Text = "NSV";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label13.Location = new System.Drawing.Point(295, 126);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(34, 15);
+            this.label13.TabIndex = 98;
+            this.label13.Text = "BSW";
             // 
             // comboBox1
             // 
@@ -1003,15 +1081,16 @@
             // but_imprimir
             // 
             this.but_imprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.but_imprimir.BackColor = System.Drawing.Color.Gainsboro;
+            this.but_imprimir.BackColor = System.Drawing.Color.Gray;
             this.but_imprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkCyan;
             this.but_imprimir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_imprimir.ForeColor = System.Drawing.Color.Black;
-            this.but_imprimir.Location = new System.Drawing.Point(947, 100);
+            this.but_imprimir.Image = ((System.Drawing.Image)(resources.GetObject("but_imprimir.Image")));
+            this.but_imprimir.Location = new System.Drawing.Point(952, 111);
             this.but_imprimir.Name = "but_imprimir";
-            this.but_imprimir.Size = new System.Drawing.Size(83, 50);
+            this.but_imprimir.Size = new System.Drawing.Size(78, 70);
             this.but_imprimir.TabIndex = 71;
-            this.but_imprimir.Text = "Imprimir";
+            this.but_imprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.but_imprimir.UseVisualStyleBackColor = false;
             // 
             // SerialPort1
@@ -1027,80 +1106,20 @@
             // 
             this.eventos_PesajesTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox3
+            // but_cancelar
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox3.Location = new System.Drawing.Point(272, 144);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(95, 27);
-            this.textBox3.TabIndex = 96;
-            this.textBox3.Text = "0";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox4.Location = new System.Drawing.Point(189, 144);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(65, 27);
-            this.textBox4.TabIndex = 95;
-            this.textBox4.Text = "0";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label12.Location = new System.Drawing.Point(186, 126);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(31, 15);
-            this.label12.TabIndex = 97;
-            this.label12.Text = "NSV";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label13.Location = new System.Drawing.Point(295, 126);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(34, 15);
-            this.label13.TabIndex = 98;
-            this.label13.Text = "BSW";
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox5.Location = new System.Drawing.Point(256, 211);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(127, 27);
-            this.textBox5.TabIndex = 99;
-            this.textBox5.Text = "0";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label14.Location = new System.Drawing.Point(253, 193);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(71, 15);
-            this.label14.TabIndex = 100;
-            this.label14.Text = "# Isotanque";
+            this.but_cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.but_cancelar.BackColor = System.Drawing.Color.Gray;
+            this.but_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkCyan;
+            this.but_cancelar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_cancelar.ForeColor = System.Drawing.Color.Black;
+            this.but_cancelar.Image = ((System.Drawing.Image)(resources.GetObject("but_cancelar.Image")));
+            this.but_cancelar.Location = new System.Drawing.Point(952, 200);
+            this.but_cancelar.Name = "but_cancelar";
+            this.but_cancelar.Size = new System.Drawing.Size(78, 70);
+            this.but_cancelar.TabIndex = 97;
+            this.but_cancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.but_cancelar.UseVisualStyleBackColor = false;
             // 
             // Pesajes
             // 
@@ -1197,13 +1216,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn taraDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pesonetoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource eventosPesajesBindingSource;
-        private GUI_V_2.PesosDataSet pesosDataSet;
-        private GUI_V_2.PesosDataSetTableAdapters.Eventos_PesajesTableAdapter eventos_PesajesTableAdapter;
+        private Peso_y_Tara.PesosDataSet pesosDataSet;
+        private Peso_y_Tara.PesosDataSetTableAdapters.Eventos_PesajesTableAdapter eventos_PesajesTableAdapter;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button but_cancelar;
     }
 }
